@@ -1,0 +1,15 @@
+package smcs.battis.helloworld;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		char c = 'a'; // 'a' is a character literal
+		String s = "this is a string literal";
+		int i = 17; // 17 is an integer literal
+		boolean b = false; // false is a boolean literal
+		
+		System.out.println("Hello World!");
+
+	}
+
+}
