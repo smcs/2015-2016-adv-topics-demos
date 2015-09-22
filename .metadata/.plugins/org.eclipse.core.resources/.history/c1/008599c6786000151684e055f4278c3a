@@ -43,20 +43,12 @@ public class StringPatterns {
 	 * @param height Height of the flag
 	 */
 	public static void flag(int width, int height) {
-		for (int h = 0; h < height; h++) {
-			if (h % 2 == 0) {
-				lineOfStars(width);
-			} else {
-				System.out.print(' ');
-				lineOfStars(width - 1);
-			}
-		}
+		
 	}
 	
 	public static void main(String[] args) {
-		//lineOfStars(10);
-		//diagonalLineOfStars(10);
-		flag(20,13);
+		lineOfStars(10);
+		diagonalLineOfStars(10);
 		System.out.println("All done.");
 	}
 
