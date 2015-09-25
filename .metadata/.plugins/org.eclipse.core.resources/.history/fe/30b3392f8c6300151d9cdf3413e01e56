@@ -1,0 +1,7 @@
+package smcs.battis.myfirstdrawing;
+
+import objectdraw.WindowController;
+
+public class MyFirstDrawing extends WindowController {
+
+}

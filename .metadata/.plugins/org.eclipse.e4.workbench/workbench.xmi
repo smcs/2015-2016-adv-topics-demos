@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_8MQo8V37EeWB4sjB-eeoOw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_8MQo8l37EeWB4sjB-eeoOw" bindingContexts="_8MQo9F37EeWB4sjB-eeoOw">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;StringPatterns.java&quot; tooltip=&quot;String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;>&#xA;&lt;persistable path=&quot;/String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HelloWorld.java&quot; tooltip=&quot;Hello World/src/smcs/battis/helloworld/HelloWorld.java&quot;>&#xA;&lt;persistable path=&quot;/Hello World/src/smcs/battis/helloworld/HelloWorld.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MyFirstDrawing.java&quot; tooltip=&quot;My First Drawing/src/smcs/battis/myfirstdrawing/MyFirstDrawing.java&quot;>&#xA;&lt;persistable path=&quot;/My First Drawing/src/smcs/battis/myfirstdrawing/MyFirstDrawing.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;StringPatterns.java&quot; tooltip=&quot;String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;>&#xA;&lt;persistable path=&quot;/String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HelloWorld.java&quot; tooltip=&quot;Hello World/src/smcs/battis/helloworld/HelloWorld.java&quot;>&#xA;&lt;persistable path=&quot;/Hello World/src/smcs/battis/helloworld/HelloWorld.java&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_8MQo8l37EeWB4sjB-eeoOw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_82vJUl37EeWB4sjB-eeoOw" label="%trimmedwindow.label.eclipseSDK" x="0" y="23" width="800" height="577">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_8MQo8l37EeWB4sjB-eeoOw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_82vJUl37EeWB4sjB-eeoOw" label="%trimmedwindow.label.eclipseSDK" x="1280" y="23" width="1280" height="693">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -141,7 +141,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_9kEJYF37EeWB4sjB-eeoOw" elementId="org.eclipse.ui.editorss" selectedElement="_9kEJYV37EeWB4sjB-eeoOw">
-      <children xsi:type="basic:PartStack" xmi:id="_9kEJYV37EeWB4sjB-eeoOw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_UL8z4F4KEeWB4sjB-eeoOw">
+      <children xsi:type="basic:PartStack" xmi:id="_9kEJYV37EeWB4sjB-eeoOw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_XG6v8GOLEeWV2qaJuHNTeg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
@@ -152,7 +152,13 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_UL8z4F4KEeWB4sjB-eeoOw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="StringPatterns.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;StringPatterns.java&quot; partName=&quot;StringPatterns.java&quot; title=&quot;StringPatterns.java&quot; tooltip=&quot;String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1009&quot; selectionTopPixel=&quot;849&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;StringPatterns.java&quot; partName=&quot;StringPatterns.java&quot; title=&quot;StringPatterns.java&quot; tooltip=&quot;String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/String Patterns/src/smcs/battis/stringpatterns/StringPatterns.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1009&quot; selectionTopPixel=&quot;280&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_XG6v8GOLEeWV2qaJuHNTeg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MyFirstDrawing.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MyFirstDrawing.java&quot; partName=&quot;MyFirstDrawing.java&quot; title=&quot;MyFirstDrawing.java&quot; tooltip=&quot;My First Drawing/src/smcs/battis/myfirstdrawing/MyFirstDrawing.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/My First Drawing/src/smcs/battis/myfirstdrawing/MyFirstDrawing.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;56&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -274,7 +280,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_89ht0F37EeWB4sjB-eeoOw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_HKDyQGB4EeWeJL_R50PmMA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_8OUefV37EeWB4sjB-eeoOw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-ekQQGOBEeWV2qaJuHNTeg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_8OUefV37EeWB4sjB-eeoOw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_89iU4F37EeWB4sjB-eeoOw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -298,7 +304,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_89iU5F37EeWB4sjB-eeoOw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_HKG1kGB4EeWeJL_R50PmMA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_8OSpUV37EeWB4sjB-eeoOw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_-en6oGOBEeWV2qaJuHNTeg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_8OSpUV37EeWB4sjB-eeoOw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_89iU5V37EeWB4sjB-eeoOw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -716,7 +722,7 @@
       <tags>platform:cocoa</tags>
       <parameters xmi:id="_8PzsOV37EeWB4sjB-eeoOw" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.mylyn.tasks.ui.views.tasks"/>
     </bindings>
-    <bindings xmi:id="_GizlAWB4EeWeJL_R50PmMA" keySequence="COMMAND+CTRL+F" command="_8QN74137EeWB4sjB-eeoOw"/>
+    <bindings xmi:id="_9_EQ0WOBEeWV2qaJuHNTeg" keySequence="COMMAND+CTRL+F" command="_8QN74137EeWB4sjB-eeoOw"/>
   </bindingTables>
   <bindingTables xmi:id="_8PeVA137EeWB4sjB-eeoOw" elementId="org.eclipse.jdt.ui.javaEditorScope" bindingContext="_8OcaT137EeWB4sjB-eeoOw">
     <bindings xmi:id="_8PeVBF37EeWB4sjB-eeoOw" keySequence="COMMAND+SHIFT+C" command="_8ONJxF37EeWB4sjB-eeoOw"/>
@@ -876,7 +882,7 @@
     <bindings xmi:id="_8PrJVV37EeWB4sjB-eeoOw" keySequence="ALT+CR" command="_8OMio137EeWB4sjB-eeoOw"/>
   </bindingTables>
   <bindingTables xmi:id="_8QPKAF37EeWB4sjB-eeoOw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_8MQo9137EeWB4sjB-eeoOw">
-    <bindings xmi:id="_Gi0MEGB4EeWeJL_R50PmMA" keySequence="M1+W" command="_8QOi9F37EeWB4sjB-eeoOw"/>
+    <bindings xmi:id="_9_E34GOBEeWV2qaJuHNTeg" keySequence="M1+W" command="_8QOi9F37EeWB4sjB-eeoOw"/>
   </bindingTables>
   <bindingTables xmi:id="_9kJo8F37EeWB4sjB-eeoOw" bindingContext="_9kJB4F37EeWB4sjB-eeoOw"/>
   <bindingTables xmi:id="_9kJo8l37EeWB4sjB-eeoOw" bindingContext="_9kJo8V37EeWB4sjB-eeoOw"/>
