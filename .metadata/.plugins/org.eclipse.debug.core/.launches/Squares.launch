@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Squares Sum to Power of 2/src/net/battis/SquaresSumToPowerOfTwo/Squares.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.battis.SquaresSumToPowerOfTwo.Squares"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Squares Sum to Power of 2"/>
+</launchConfiguration>
