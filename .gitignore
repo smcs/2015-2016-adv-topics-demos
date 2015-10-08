@@ -1,28 +1,47 @@
 ######################################################################
 # St. Mark’s Eclipse
 
-# ignore compiled binaries
-*/bin/*
+# workspace ################################################
 
-# ignore metadata
+# ignore metadata _contents only_ (will want _some_ subdirs later)
 .metadata/*
+!.metadata/version.ini
 !.metadata/.plugins
 .metadata/.plugins/*
 
-# …but intclude Java Developer Toolkit prefs (i.e. User Libraries, etc.)
+# include project information
+!.metadata/.plugins/org.eclipse.core.resources
+.metadata/.plugins/org.eclipse.core.resources/.history
+
+# include Java Developer Toolkit prefs (i.e. User Libraries, etc.)
 !.metadata/.plugins/org.eclipse.core.runtime
-.metadata/.plugins/org.eclipse.core.runtime/*
+.metadata/.plugins/org.eclisep.core.runtime/*
 !.metadata/.plugins/org.eclipse.core.runtime/.settings
-.metadata/.plugins/org.eclipse.core.runtime/.settings/*
-!.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs
 
-# …but include workbench settings
-!.metadata/.plugins/org.eclipse.34.workbench
+# ignore machine-specific eGit prefs (will be rebuilt)
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs
 
-# recommenders
-.recommenders
+# ignore machine-specific Java runtimes
+.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs
 
-#project-level indexes
-*.index
+#include debugging UI settings
+!.metadata/.plugins/org.eclipse.debug.ui
+
+# include IDE UI settings
+!.metadata/.plugins/org.eclipse.ui.ide
+
+# include workbench settings
+!.metadata/.plugins/org.eclipse.e4.workbench/*
+
+# include working sets
+!.metadata/.plugins/org.eclipse.ui.workbench
+
+# disable recommenders (it will be rebuilt on the fly)
+.recommenders/
+
+# disable Mylyn
+*mylyn*
+
+# per-project ##############################################
 
 ######################################################################
