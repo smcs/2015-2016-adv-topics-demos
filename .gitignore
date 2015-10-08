@@ -13,6 +13,7 @@
 .metadata/.plugins/org.eclipse.core.resources/.projects/*/*
 !.metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes
 .metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes/*
+!.metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes/properties.index
 
 # ...except working sets
 !.metadata/.plugins/org.eclipse.ui.workbench
