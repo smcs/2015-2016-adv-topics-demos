@@ -12,6 +12,9 @@
 # include project information
 !.metadata/.plugins/org.eclipse.core.resources
 .metadata/.plugins/org.eclipse.core.resources/.history
+.metadata/.plugins/org.eclipse.core.resources/.projects
+savedIndexNames.txt
+*.snap
 
 # include Java Developer Toolkit prefs (i.e. User Libraries, etc.)
 !.metadata/.plugins/org.eclipse.core.runtime
@@ -41,7 +44,5 @@
 
 # disable Mylyn
 *mylyn*
-
-# per-project ##############################################
 
 ######################################################################
