@@ -20,6 +20,8 @@
 !.metadata/.plugins/org.eclipse.core.runtime
 .metadata/.plugins/org.eclisep.core.runtime/*
 !.metadata/.plugins/org.eclipse.core.runtime/.settings
+.metadata/.plugins/org.eclipse.core.runtime/.settings/*
+!.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.pref
 
 # ignore Eclipse Recommenders (http://www.eclipse.org/recommenders/)
 .recommenders
