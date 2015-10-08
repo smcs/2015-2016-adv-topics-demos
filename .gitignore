@@ -1,15 +1,28 @@
-.metadata/.plugins/org.eclipse.core.resources/.history/*
+######################################################################
+# St. Mark’s Eclipse
 
-# https://github.com/github/gitignore/blob/master/Java.gitignore
-*.class
+# ignore compiled binaries
+*/bin/*
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# ignore metadata
+.metadata/*
+!.metadata/.plugins
+.metadata/.plugins/*
 
-# Package Files #
-# *.jar
-*.war
-*.ear
+# …but intclude Java Developer Toolkit prefs (i.e. User Libraries, etc.)
+!.metadata/.plugins/org.eclipse.core.runtime
+.metadata/.plugins/org.eclipse.core.runtime/*
+!.metadata/.plugins/org.eclipse.core.runtime/.settings
+.metadata/.plugins/org.eclipse.core.runtime/.settings/*
+!.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# …but include workbench settings
+!.metadata/.plugins/org.eclipse.34.workbench
+
+# recommenders
+.recommenders
+
+#project-level indexes
+*.index
+
+######################################################################
