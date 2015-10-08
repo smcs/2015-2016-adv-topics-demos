@@ -15,8 +15,6 @@
 .metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes/*
 !.metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes/properties.index
 !.metadata/.plugins/org.eclipse.core.resources/.root
-.metadata/.plugins/org.eclipse.core.resources/.root/*
-!.metadata/.plugins/org.eclipse.core.resources/.root/*.tree
 
 # ...except working sets
 !.metadata/.plugins/org.eclipse.ui.workbench
