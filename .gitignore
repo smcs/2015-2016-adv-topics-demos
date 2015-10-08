@@ -1,5 +1,9 @@
 ######################################################################
-# St. Mark's Eclipse JDT
+# Minimal Eclipse Mars JDT
+#
+# https://gist.github.com/battis/f9adaebfab50c0d5bcb0
+#
+# Capture projects and user library configuration, but nothing else
 
 # ignore Eclipse metadata
 .metadata/*
@@ -26,5 +30,8 @@ state.dat
 
 # ignore Eclipse Recommenders (http://www.eclipse.org/recommenders/)
 .recommenders
+
+# ignore project-level /bin/ directories of compiled bytecode
+bin/
 
 ######################################################################
