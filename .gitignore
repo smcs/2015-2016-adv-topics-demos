@@ -9,9 +9,10 @@
 # ...except the workspace resource tree
 !.metadata/.plugins/org.eclipse.core.resources
 .metadata/.plugins/org.eclipse.core.resources/*
-!.metadata/.plugins/org.eclipse.core.resources/.root
-.metadata/.plugins/org.eclipse.core.resources/.root/*
-!.metadata/.plugins/org.eclipse.core.resources/.root/*.tree
+!.metadata/.plugins/org.eclipse.core.resources/.projects
+.metadata/.plugins/org.eclipse.core.resources/.projects/*/*
+!.metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes
+.metadata/.plugins/org.eclipse.core.resources/.projects/*/.indexes/*
 
 # ...except working sets
 !.metadata/.plugins/org.eclipse.ui.workbench
