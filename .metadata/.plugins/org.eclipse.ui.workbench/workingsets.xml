@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1444324686687_1" label="We all use Java" name="We all use Java">
-<item elementID="=2. GrowMan" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=3. Dicey" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/3. Dicey" type="4"/>
 <item elementID="=5. FunnyFace and TopHat STARTER" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=1. DrawRect" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=2. RandomBox" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. RandomBox" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1442577247578_0" label="Window Working Set" name="Aggregate for window 1442577247577"/>
 </workingSetManager>
