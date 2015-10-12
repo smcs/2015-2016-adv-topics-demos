@@ -3,24 +3,29 @@ package smcs.battis.RandomBox;
 import objectdraw.*;
 
 public class RandomBox extends WindowController {
-	private FilledOval o;
+	
+	private FilledRect rect;
 	
 	public void begin() {
-		double ovalWidth = 96;
-		double ovalHeight = 47;
-		o = new FilledOval(
-				(canvas.getWidth() - ovalWidth) / 2,
-				(canvas.getHeight() - ovalHeight) / 2,
-				ovalWidth,
-				ovalHeight,
-				canvas
-			);
+		// start with random rectangle
+		rect = new FilledRect(10, 10, 20, 20, canvas);
+	}
+	
+	public void onMouseEnter(Location p) {
+		// new rectangle
+		if (rect.getCanvas() != null) {
+			// destroy
+		}
+		
+		// recreate
+	}
+	
+	public void onMouseExit(Location p) {
+		// hide rectangle
+		rect.removeFromCanvas();
 	}
 	
 	public void onMouseClick(Location p) {
-		o.moveTo(
-				(canvas.getWidth() - o.getWidth()) / 2,
-				(canvas.getHeight() - o.getHeight()) / 2
-			);
+		// show information
 	}
 }
