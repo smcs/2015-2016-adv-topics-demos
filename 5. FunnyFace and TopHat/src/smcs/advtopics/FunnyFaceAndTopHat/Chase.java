@@ -2,17 +2,34 @@ package smcs.advtopics.FunnyFaceAndTopHat;
 
 import objectdraw.*;
 
+/**
+ * A quick little game where a funny face chases the mouse around the screen.
+ * 
+ * @author Seth Battis <SethBattis@stmarksschool.org>
+ */
 public class Chase extends WindowController {
-	
-	private FunnyFace ff;
-	
+
+	/**
+	 * The face that will track my mouse
+	 */
+	private FunnyFaceWithTopHatV2 ff;
+
+	/**
+	 * Set up the window
+	 */
 	public void begin() {
-		ff = new FunnyFace(100, 100, canvas);
+		this.resize(500, 300);
+
+		ff = new FunnyFaceWithTopHatV2(100, 100, canvas);
 	}
-	
+
+	/**
+	 * Have the face chase the mouse
+	 * 
+	 * @param point
+	 *            Where the mouse clicked
+	 */
 	public void onMouseMove(Location point) {
-		// ff.moveTo(point.getX(), point.getY());
-		
 		ff.moveTo(point);
 	}
 }
