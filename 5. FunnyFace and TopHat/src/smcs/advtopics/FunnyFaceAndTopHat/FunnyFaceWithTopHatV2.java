@@ -3,7 +3,8 @@ package smcs.advtopics.FunnyFaceAndTopHat;
 import objectdraw.*;
 
 /**
- * This is what this class does.
+ * This approach to FunnyFace and Tophat extends FunnyFace to include an
+ * additional TopHat component
  * 
  * @author sethbattis
  */

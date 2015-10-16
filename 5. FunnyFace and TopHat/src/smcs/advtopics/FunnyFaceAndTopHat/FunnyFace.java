@@ -3,11 +3,20 @@ package smcs.advtopics.FunnyFaceAndTopHat;
 import objectdraw.*;
 import java.awt.*;
 
+/**
+ * This approach to FunnyFace and TopHat just edits the original FunnyFace
+ * object. (This is the least-recommended approach, although some editing is
+ * necessary to change private variables to protected to allow extending
+ * subclasses to see those variables.)
+ * 
+ * @author sethbattis
+ *
+ */
 public class FunnyFace {
 
 	/*
-	 * protected means that no one outside this class can access this, but classes
-	 * that extend this class DO inherit access to this
+	 * protected means that no one outside this class can access this, but
+	 * classes that extend this class DO inherit access to this
 	 */
 	protected static final double FACE_HEIGHT = 60, // Dimensions of the face
 			FACE_WIDTH = 60, EYE_OFFSET = 20, // Eye location and size
