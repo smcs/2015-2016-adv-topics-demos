@@ -12,35 +12,39 @@ import objectdraw.*;
  */
 public class TrackingBullet extends ActiveObject {
 
-	private MovingTarget a;
+	private MovingTarget target;
 	private FilledOval me;
 
-	public TrackingBullet(MovingTarget a, Location point, DrawingCanvas canvas) {
-		this.a = a;
+	public TrackingBullet(MovingTarget target, Location point, DrawingCanvas canvas) {
+		this.target = target;
 		me = new FilledOval(point, 10, 10, canvas);
 		me.setColor(Color.PINK);
 		start();
 	}
 
 	public void run() {
-		while (true) {
+		while (!target.overlaps(me)) {
 
 			/*
 			 * work out the angle between "me" and "target" and advance one unit
 			 * towards target
 			 */
-			// caveat: we pretended this was all in the first quadrant
-			double targetX = a.getLocation().getX();
-			double targetY = a.getLocation().getY();
+			double targetX = target.getLocation().getX();
+			double targetY = target.getLocation().getY();
 
 			double meX = me.getX();
 			double meY = me.getY();
 
 			double theta = Math.atan((targetY - meY) / (targetX - meX));
+			if (meX > targetX) {
+				theta += Math.PI;
+			}
 
-			pause(30);
+			pause(5);
 			me.move(Math.cos(theta), Math.sin(theta));
 		}
+		target.grow();
+		me.removeFromCanvas();
 	}
 
 }

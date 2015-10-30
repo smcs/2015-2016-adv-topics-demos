@@ -39,4 +39,12 @@ public class MovingTarget extends ActiveObject {
 	public Location getLocation() {
 		return me.getLocation();
 	}
+
+	public boolean overlaps(Drawable2DInterface other) {
+		return me.overlaps(other);
+	}
+	
+	public void grow() {
+		me.setSize(me.getWidth() + 0.1, me.getHeight() + 0.1);
+	}
 }
