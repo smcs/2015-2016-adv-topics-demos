@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
-<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1444324686687_1" label="We all use Java" name="We all use Java">
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1444324686687_1" label="1. We all use Java" name="1. We all use Java">
+<item elementID="=Passing References" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Declarations and Instantiation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Contains a Click" type="4"/>
+<item elementID="=7. HitTheTarget" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/1. DrawRect" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Squares Sum to Power of 2" type="4"/>
+<item elementID="=5. FunnyFace and TopHat" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Class vs. Instance vs. Local Variables" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/3. Dicey" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/4. ElapsedTime" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/5. FunnyFace and TopHat STARTER" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ComplicatedShape" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hello World" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/String Patterns" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Libraries" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. RandomBox" type="4"/>
+<item elementID="=ActiveObject Example" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/My First Drawing" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646037693_3" label="2. Design Patterns" name="2. Design Patterns">
+<item elementID="=Model-View-Controller" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Hello Swinging World" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646156474_8" label="1. We all use Java (Challenges)" name="1. We all use Java (Challenges)">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
+<item elementID="=5. FunnyFace and TopHat" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/3. Dicey" type="4"/>
+<item elementID="=7. HitTheTarget" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/4. ElapsedTime" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/5. FunnyFace and TopHat STARTER" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/1. DrawRect" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. RandomBox" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446648450497_5" label="Challenge #2" name="Challenge #2">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. RandomBox" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1442577247578_0" label="Window Working Set" name="Aggregate for window 1442577247577"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646159984_9" label="Multiple Working Sets" name="Aggregate:1. We all use Java:1. We all use Java (Challenges):">
+<workingSet IMemento.internal.id="1. We all use Java"/>
+<workingSet IMemento.internal.id="1. We all use Java (Challenges)"/>
+</workingSet>
+<mruList name="2. Design Patterns"/>
+<mruList name="1. We all use Java"/>
+<mruList name="Challenge #2"/>
+<mruList name="1. We all use Java (Challenges)"/>
 </workingSetManager>
