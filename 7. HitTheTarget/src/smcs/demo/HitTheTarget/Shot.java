@@ -23,7 +23,7 @@ public class Shot extends ActiveObject {
 	}
 
 	public void run() {
-		while (!(target.overlaps(shot) || shot.getX() - HEIGHT < 0)) {
+		while (!(target.overlaps(shot) || shot.getY() - HEIGHT < 0)) {
 			pause(DELAY);
 			shot.move(0, -1);
 		}
