@@ -12,9 +12,7 @@ import objectdraw.*;
  */
 public class FunnyFaceWithTopHatV1 {
 	private FunnyFace ff;
-	private FilledOval brim, top;
-	private FilledRect hat;
-
+ 
 	private static final int HAT_WIDTH = 50, HAT_HEIGHT = 40, HAT_Y_OFFSET = 30 + HAT_HEIGHT,
 			HAT_X_OFFSET = HAT_WIDTH / 2;
 

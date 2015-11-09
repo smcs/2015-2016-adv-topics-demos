@@ -12,7 +12,7 @@ public class Chase extends WindowController {
 	/**
 	 * The face that will track my mouse
 	 */
-	private FunnyFaceWithTopHatV2 ff;
+	private FunnyFaceWithTopHatV3 ff;
 
 	/**
 	 * Set up the window
@@ -20,7 +20,7 @@ public class Chase extends WindowController {
 	public void begin() {
 		this.resize(500, 300);
 
-		ff = new FunnyFaceWithTopHatV2(100, 100, canvas);
+		ff = new FunnyFaceWithTopHatV3(100, 100, canvas);
 	}
 
 	/**
