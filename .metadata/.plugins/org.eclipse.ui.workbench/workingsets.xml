@@ -23,7 +23,9 @@
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646037693_3" label="2. Design Patterns" name="2. Design Patterns">
 <item elementID="=Model-View-Controller" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Templated Type" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Hello Swinging World" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Order Dominos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646156474_8" label="1. We all use Java (Challenges)" name="1. We all use Java (Challenges)">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
@@ -44,8 +46,8 @@
 <workingSet IMemento.internal.id="1. We all use Java"/>
 <workingSet IMemento.internal.id="1. We all use Java (Challenges)"/>
 </workingSet>
-<mruList name="1. We all use Java (Challenges)"/>
 <mruList name="2. Design Patterns"/>
+<mruList name="1. We all use Java (Challenges)"/>
 <mruList name="1. We all use Java"/>
 <mruList name="Challenge #2"/>
 </workingSetManager>

@@ -42,9 +42,12 @@ public class Shooter extends ActiveObject {
 	}
 
 	public void run() {
-		for (int i = 0; i < SHOTS; i++) {
+		Shot shots[];
+		shots = new Shot[SHOTS];
+		
+		for (int i = 0; i < shots.length; i++) {
 			pause(DELAY);
-			new Shot(target, body.getLocation().getX() + WIDTH / 2, body.getCanvas().getHeight(), body.getCanvas());
+			shots[i] = new Shot(target, body.getLocation().getX() + WIDTH / 2, body.getCanvas().getHeight(), body.getCanvas());
 		}
 		body.removeFromCanvas();
 	}
