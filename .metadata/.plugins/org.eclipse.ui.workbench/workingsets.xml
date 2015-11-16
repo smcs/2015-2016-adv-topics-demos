@@ -22,10 +22,12 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/My First Drawing" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646037693_3" label="2. Design Patterns" name="2. Design Patterns">
+<item elementID="=Chat" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Order Dominos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Model-View-Controller" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Templated Type" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Hello Swinging World" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=Order Dominos" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Simon Says Server" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646156474_8" label="1. We all use Java (Challenges)" name="1. We all use Java (Challenges)">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
