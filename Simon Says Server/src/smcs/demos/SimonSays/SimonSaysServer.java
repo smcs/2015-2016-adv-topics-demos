@@ -5,57 +5,36 @@ import java.net.*;
 
 public class SimonSaysServer implements Runnable {
 
-	private ServerSocket serverSocket;
-	
+	public static final String SHUT_DOWN = "Exit";
+
+	private ServerSocket server;
+
 	public SimonSaysServer(int port) {
 		try {
-			serverSocket = new ServerSocket(port);
+			server = new ServerSocket(port);
+			log("Ready on port " + port);
+			new Thread(this).start();
 		} catch (IOException e) {
-			System.err.println("Could not create a server socket on port " + port);
+			error("Could not listen on port " + port);
+			error("Shutting down");
 		}
-		new Thread(this).start();
 	}
 	
-	@Override
-	public void run() {
-		Socket clientSocket;
-		DataInputStream in;
-		PrintStream out;
-		String line;
-		
-		try {
-			clientSocket = serverSocket.accept();
-			in = new DataInputStream(clientSocket.getInputStream());
-			out = new PrintStream(clientSocket.getOutputStream());
-			
-			out.println("Let's play Simon says");
-			while (!(line = in.readLine()).equals("Simon says")) {
-				out.println("[ignoring you]");
-			}
-			out.println(line + " good-bye");
-			
-			in.close();
-			out.close();
-			clientSocket.close();
-		} catch (IOException e) {
-			System.err.println("Could not connect to a client");
-		}
+	private void log(String message) {
+		System.out.println("Server: " + message);
+	}
+	
+	private void error(String message) {
+		System.err.println("Server: " + message);
 	}
 
+	public void run() {
+		while (true) {
+			try {
+				new SimonSaysResponder(server.accept());
+			} catch (IOException e) {
+				error("Could not connect to client");
+			}
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
