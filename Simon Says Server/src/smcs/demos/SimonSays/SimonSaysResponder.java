@@ -51,7 +51,7 @@ public class SimonSaysResponder implements Runnable, SimonSaysProtocol {
 				/* open new streams connected to our socket */
 				input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 				output = new PrintStream(clientSocket.getOutputStream());
-				log("Started");
+				log("Started with " + clientSocket.getInetAddress().getHostName());
 
 				/* loop until the user "gets" it */
 				while (!done) {
@@ -72,10 +72,10 @@ public class SimonSaysResponder implements Runnable, SimonSaysProtocol {
 				log("Ended");
 
 			} catch (IOException e) {
-				error("Could not open stream with " + clientSocket.getLocalAddress().getHostName());
+				error("Could not open stream with " + clientSocket.getInetAddress().getHostName());
 			}
 		} else {
-			error("Connection to " + clientSocket.getLocalAddress().getHostName() + " lost.");
+			error("Connection to " + clientSocket.getInetAddress().getHostName() + " lost.");
 		}
 	}
 
