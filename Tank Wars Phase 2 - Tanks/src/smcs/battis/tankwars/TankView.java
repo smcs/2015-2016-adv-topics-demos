@@ -10,7 +10,7 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class TankView implements View {
+public class TankView extends View {
 
     public static final double BODY_RADIUS = 10;
     public static final double BARREL_LENGTH = BODY_RADIUS * 2;
@@ -27,6 +27,8 @@ public class TankView implements View {
     }
 
     public TankView(Tank tank, Color color, DrawingCanvas canvas) {
+	super(canvas);
+	
 	this.tank = tank;
 
 	body = new FilledArc(tank.getCenter().getX() - BODY_RADIUS, tank.getCenter().getY() - BODY_RADIUS,
@@ -58,6 +60,12 @@ public class TankView implements View {
 
     public Tank getTank() {
 	return tank;
+    }
+
+    @Override
+    public void hide() {
+	// TODO Auto-generated method stub
+	
     }
 
 }

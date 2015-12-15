@@ -10,7 +10,7 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class Terrain implements SolidObject {
+public class Terrain extends SolidObject {
 
     public static final double DEFAULT_CEILING = 0.75, // %, 0-1, > floor
 	    DEFAULT_FLOOR = 0.1, // %, 0-1, < ceiling
@@ -32,7 +32,6 @@ public class Terrain implements SolidObject {
 
     public Terrain(double width, double height, double ceiling, double floor, double segment, double turn,
 	    double upLimit, double downLimit, double bearing, double weight, int weightStep, double weightShift) {
-	super();
 
 	/* convert proportions to coordinates */
 	ceiling = height * ceiling;
@@ -95,12 +94,6 @@ public class Terrain implements SolidObject {
 		}
 	    }
 	}
-	return false;
-    }
-
-    @Override
-    public boolean contains(double x, double y) {
-	// TODO Auto-generated method stub
 	return false;
     }
 

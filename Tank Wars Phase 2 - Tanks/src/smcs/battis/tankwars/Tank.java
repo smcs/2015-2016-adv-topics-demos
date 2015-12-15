@@ -8,7 +8,7 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class Tank implements SolidObject {
+public class Tank extends SolidObject {
 
     public static final double DROP_STEP = 3, // pixel, when placing
 	    ANGLE_FLOOR = Math.PI, // rad, <= ANGLE_CEILING
@@ -22,7 +22,6 @@ public class Tank implements SolidObject {
     private double angle, power;
 
     public Tank(Terrain terrain, Location start) {
-	super();
 	angle = (ANGLE_FLOOR + ANGLE_CEILING) / 2;
 	power = (POWER_FLOOR + POWER_CEILING) / 2;
 	center = start;
@@ -34,12 +33,6 @@ public class Tank implements SolidObject {
 
     @Override
     public boolean contains(Location point) {
-	// TODO Auto-generated method stub
-	return false;
-    }
-
-    @Override
-    public boolean contains(double x, double y) {
 	// TODO Auto-generated method stub
 	return false;
     }

@@ -1,6 +1,5 @@
 package smcs.battis.tankwars;
 
-import java.awt.*;
 import java.util.*;
 
 import objectdraw.*;
@@ -11,12 +10,14 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
+@SuppressWarnings("serial")
 public class Game extends WindowController {
 
     public static final int TANK_COUNT = 10;
 
     public void begin() {
 	this.resize(600, 600);
+	canvas.requestFocus();
 
 	Terrain terrain = new Terrain(canvas.getWidth(), canvas.getHeight());
 	TerrainView terrainView = new TerrainView(terrain, canvas);

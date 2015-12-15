@@ -10,13 +10,14 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class TerrainView implements View {
+public class TerrainView extends View {
 
     private Terrain terrain;
 
     private Vector<Line> surface;
 
     public TerrainView(Terrain terrain, DrawingCanvas canvas) {
+	super(canvas);
 
 	Location prev = null, next = null;
 
@@ -37,7 +38,7 @@ public class TerrainView implements View {
     @Override
     public void draw() {
 	
-	// FIXME this doesn't pay attention to changes in the terrain
+	/* FIXME this doesn't pay attention to changes in the terrain */
 
 	for (Iterator<Line> i = surface.iterator(); i.hasNext();) {
 	    i.next().show();
@@ -47,6 +48,12 @@ public class TerrainView implements View {
 
     public Terrain getTerrain() {
 	return terrain;
+    }
+
+    @Override
+    public void hide() {
+	// TODO Auto-generated method stub
+	
     }
 
 }

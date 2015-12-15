@@ -8,22 +8,28 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public interface SolidObject {
+public abstract class SolidObject {
 
     /**
      * Detects if a point is within the SolidObject
      * 
      * @param point
-     * @return true iff the point is contained by the SolidObject, false otherwise
+     * @return true iff the point is contained by the SolidObject, false
+     *         otherwise
      */
-    public boolean contains(Location point);
+    public abstract boolean contains(Location point);
 
     /**
      * Detects if a point is within the SolidObject
      * 
-     * @param x X-coordinate of the point
-     * @param y Y-coordinate of the point
-     * @return true iff the point is contained by the SolidObject, false otherwise
+     * @param x
+     *            X-coordinate of the point
+     * @param y
+     *            Y-coordinate of the point
+     * @return true iff the point is contained by the SolidObject, false
+     *         otherwise
      */
-    public boolean contains(double x, double y);
+    public final boolean contains(double x, double y) {
+	return contains(new Location(x, y));
+    }
 }

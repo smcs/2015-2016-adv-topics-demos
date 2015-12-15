@@ -2,6 +2,7 @@ package smcs.battis.tankwars;
 
 import objectdraw.*;
 
+@SuppressWarnings("serial")
 public class RandomTerrainViewer extends WindowController {
 
     private Terrain terrain;
