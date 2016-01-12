@@ -91,7 +91,7 @@ public class Tank extends SolidObject {
 
     public Bullet fire() {
 	/*
-	 * bullet starts at the end of the barrel to prevent accidental suicides
+	 * bullet starts at the end of the barrel to prevent "friendly fire"
 	 */
 	return new Bullet(new Location(center.getX() - (RADIUS + BARREL_LENGTH) * Math.cos(angle),
 		center.getY() + (RADIUS + BARREL_LENGTH) * Math.sin(angle)), angle, power);

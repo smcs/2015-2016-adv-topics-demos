@@ -34,6 +34,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 2 - Tanks" type="4"/>
 <item elementID="=Tank Wars Phase 4 - Referee and Turns" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Tank Wars Phase 5 - Swing" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Swing App" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646156474_8" label="1. We all use Java (Challenges)" name="1. We all use Java (Challenges)">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/2. GrowMan" type="4"/>
@@ -50,10 +51,11 @@
 <item elementID="=Tank Wars Phase 3 - Bullets and Collisions" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 1 - Random Terrain" type="4"/>
 <item elementID="=Tank Wars Phase 6 - Network" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Linked List Demo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 2 - Tanks" type="4"/>
 <item elementID="=Tank Wars Phase 4 - Referee and Turns" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Tank Wars Phase 5 - Swing" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=Linked List Demo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Swing App" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451854558832_7" label="PHP Development" name="PHP Development">
 <item elementID="=batch-action" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
@@ -63,9 +65,9 @@
 <workingSet IMemento.internal.id="1. We all use Java"/>
 <workingSet IMemento.internal.id="1. We all use Java (Challenges)"/>
 </workingSet>
-<mruList name="PHP Development"/>
-<mruList name="2. Design Patterns (Tank Wars)"/>
 <mruList name="2. Design Patterns"/>
+<mruList name="2. Design Patterns (Tank Wars)"/>
+<mruList name="PHP Development"/>
 <mruList name="Challenge #2"/>
 <mruList name="1. We all use Java (Challenges)"/>
 </workingSetManager>

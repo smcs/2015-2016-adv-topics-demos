@@ -9,7 +9,7 @@ import java.util.*;
  * @author sethbattis
  *
  */
-public class Referee {
+public class Referee implements BulletListener {
 
     /**
      * The queue of players
@@ -44,7 +44,7 @@ public class Referee {
      * @return true if the player was in the game (and is now removed) or false
      *         if the player was not in the game
      */
-    public boolean removePlayer(Tank player) {
+    private boolean removePlayer(Tank player) {
 	if (!players.remove(player)) {
 	    if (player == activePlayer) {
 		activePlayer = null;
@@ -56,9 +56,23 @@ public class Referee {
     }
 
     /**
+     * Remove a list of tanks from the player list
+     * 
+     * @param hits
+     */
+    private void removePlayers(Vector<SolidObject> hits) {
+	for (SolidObject hit : hits) {
+	    if (hit.getClass() == Tank.class) {
+		removePlayer((Tank) hit);
+	    }
+	}
+    }
+
+    /**
      * Advance to the next player's turn
      */
-    public void nextTurn() {
+    public void nextTurn(Vector<SolidObject> hits) {
+	removePlayers(hits);
 	if (activePlayer != null) {
 	    players.add(activePlayer);
 	}
@@ -98,5 +112,34 @@ public class Referee {
      */
     public Tank activePlayer() {
 	return activePlayer;
+    }
+
+    /**
+     * Disable the active player so no one can shoot!
+     */
+    public void disableActivePlayer() {
+	if (activePlayer != null) {
+	    players.add(activePlayer);
+	    activePlayer = null;
+	}
+    }
+
+    @Override
+    public void onBulletFired() {
+	disableActivePlayer();
+    }
+
+    @Override
+    public void onBulletImpact(Vector<SolidObject> hits) {
+	nextTurn(hits);
+    }
+
+    /**
+     * Start the game!
+     */
+    public void beginGame() {
+	if (activePlayer == null) {
+	    activePlayer = players.remove();
+	}
     }
 }

@@ -10,15 +10,10 @@ import java.util.*;
  */
 public class BulletController implements Runnable {
 
-    public static final long DELAY = 250; // millis
+    public static final long DELAY = 10; // millis
 
     private Bullet bullet;
     private BulletView view;
-
-    /*
-     * BulletController needs to maintain a list of BulletListeners and inform
-     * the when the bullet is fired and lands
-     */
 
     public BulletController(Bullet bullet, BulletView view) {
 	this.bullet = bullet;
@@ -41,14 +36,6 @@ public class BulletController implements Runnable {
 	    }
 	} while ((hits = bullet.move()).isEmpty());
 	view.draw();
-
-	/* print out if any of the hits are a tank */
-	for (Iterator<SolidObject> i = hits.iterator(); i.hasNext();) {
-	    if (i.next().getClass() == Tank.class) {
-		System.out.println("Hit a tank.");
-	    }
-	}
-
     }
 
 }

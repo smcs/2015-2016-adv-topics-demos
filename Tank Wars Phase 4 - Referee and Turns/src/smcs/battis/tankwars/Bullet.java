@@ -20,6 +20,8 @@ public class Bullet {
     private Location center, previousCenter, nextCenter;
     private double velocityX, velocityY;
 
+    private Vector<BulletListener> listeners;
+
     public Bullet(Location center, double angle, double power) {
 	super();
 
@@ -31,6 +33,13 @@ public class Bullet {
 
 	velocityX = power * Math.cos(angle);
 	velocityY = power * Math.sin(angle);
+
+	// instantiate listeners
+	listeners = new Vector<BulletListener>();
+    }
+
+    public void addBulletListener(BulletListener listener) {
+	listeners.add(listener);
     }
 
     /**
@@ -39,6 +48,14 @@ public class Bullet {
      * @return A list of SolidObjects hit by the bullet after this move
      */
     public Vector<SolidObject> move() {
+
+	/* when we start moving, tell listeners we were fired */
+	if (previousCenter == null) {
+	    for (BulletListener listener : listeners) {
+		listener.onBulletFired();
+	    }
+	}
+
 	/*
 	 * if we're "essentially" at the nextCenter, re-calculate next segment
 	 */
@@ -66,7 +83,22 @@ public class Bullet {
 		    center.getY() + increment);
 	}
 
-	return SolidObject.objectsContaining(center);
+	Vector<SolidObject> hits = SolidObject.objectsContaining(center);
+
+	/*
+	 * if hits not empty, bullet has landed (tell listeners)
+	 * 
+	 * FIXME if the bullet continues after impact, the BulletListeners will
+	 * be informed of impact multiple times. This _could_ be a bad thing.
+	 * (e.g. if the Referee advances the turn multiple times)
+	 */
+	if (!hits.isEmpty()) {
+	    for (BulletListener listener : listeners) {
+		listener.onBulletImpact(hits);
+	    }
+	}
+
+	return hits;
     }
 
     public Location getCenter() {
