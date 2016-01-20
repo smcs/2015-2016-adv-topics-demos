@@ -58,7 +58,7 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 5 - Swing" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451854558832_7" label="PHP Development" name="PHP Development">
-<item elementID="=batch-action" factoryID="org.eclipse.dltk.ui.PersistableModelElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/batch-action" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1442577247578_0" label="Window Working Set" name="Aggregate for window 1442577247577"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1446646159984_9" label="Multiple Working Sets" name="Aggregate:1. We all use Java:1. We all use Java (Challenges):">
