@@ -1,10 +1,16 @@
 package smcs.battis.tankwars.network;
 
+import java.awt.*;
+import java.io.*;
+import java.net.*;
+import java.util.*;
+
 import objectdraw.*;
 import smcs.battis.tankwars.*;
 
 /**
  * An object to manage network events on the client-side
+ * 
  * @author sethbattis
  *
  */
@@ -12,7 +18,7 @@ public class ClientController implements NetworkListener {
 
     private LocalReferee localReferee;
     private DrawingCanvas canvas;
-    
+
     @Override
     public void createTerrain(Terrain terrain) {
 	new TerrainView(terrain, canvas).draw();
@@ -28,14 +34,15 @@ public class ClientController implements NetworkListener {
     @Override
     public void assignTank(int tankId) {
 	// this is the tank that our keyboard talks to
-	
+
 	// this is probably about registering a specific TankController as a
 	// KeyListener (and the others as remote controlled)
     }
 
     @Override
     public void bulletFired(Bullet bullet) {
-	// create and animate a bullet
+	// FIXME bullet color!
+	new BulletController(bullet, new BulletView(bullet, Color.RED, canvas));
     }
 
     @Override
@@ -45,7 +52,6 @@ public class ClientController implements NetworkListener {
 
     @Override
     public void nextTank(int tankId) {
-	// tell local referree which tank is active
+	localReferee.setActive(tankId);
     }
-
 }

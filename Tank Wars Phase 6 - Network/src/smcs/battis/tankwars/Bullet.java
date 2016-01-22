@@ -1,5 +1,6 @@
 package smcs.battis.tankwars;
 
+import java.io.*;
 import java.util.*;
 
 import objectdraw.*;
@@ -12,7 +13,7 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class Bullet {
+public class Bullet implements Serializable {
 
     public static final double GRAVITY = -9.8; // m/s^2
     public static final long DELAY = 100; // milliseconds

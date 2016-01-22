@@ -1,5 +1,7 @@
 package smcs.battis.tankwars;
 
+import java.io.*;
+
 import objectdraw.*;
 
 /**
@@ -8,8 +10,8 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class Tank extends SolidObject {
-    
+public class Tank extends SolidObject implements Serializable {
+
     private static int nextId = 1337; // h4x0r for "elite"
     private int id;
 
@@ -36,7 +38,7 @@ public class Tank extends SolidObject {
      */
     public Tank(Terrain terrain, Location start) {
 	super();
-	
+
 	id = nextId++;
 
 	angle = (ANGLE_FLOOR + ANGLE_CEILING) / 2;

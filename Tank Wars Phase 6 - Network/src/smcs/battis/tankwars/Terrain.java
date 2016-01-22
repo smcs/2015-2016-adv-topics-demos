@@ -1,5 +1,6 @@
 package smcs.battis.tankwars;
 
+import java.io.*;
 import java.util.*;
 
 import objectdraw.*;
@@ -12,7 +13,7 @@ import objectdraw.*;
  * @author sethbattis
  *
  */
-public class Terrain extends SolidObject {
+public class Terrain extends SolidObject implements Serializable {
 
     public static final double DEFAULT_CEILING = 0.75, // %, 0-1, > floor
 	    DEFAULT_FLOOR = 0.1, // %, 0-1, < ceiling

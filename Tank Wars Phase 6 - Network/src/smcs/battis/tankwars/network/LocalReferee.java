@@ -28,4 +28,17 @@ public class LocalReferee extends Referee {
 
 	return false;
     }
+
+    public void setActive(int tankId) {
+	if (activePlayer != null) {
+	    players.add(activePlayer);
+	}
+	for(Tank player : players) {
+	    if (player.getId() == tankId) {
+		activePlayer = player;
+		players.remove(player);
+		return;
+	    }
+	}
+    }
 }
