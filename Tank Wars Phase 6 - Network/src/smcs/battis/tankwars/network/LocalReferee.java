@@ -41,4 +41,13 @@ public class LocalReferee extends Referee {
 	    }
 	}
     }
+
+    public Tank getPlayer(int tankId) {
+	for (Tank player : players) {
+	    if (player.getId() == tankId) {
+		return player;
+	    }
+	}
+	return null;
+    }
 }

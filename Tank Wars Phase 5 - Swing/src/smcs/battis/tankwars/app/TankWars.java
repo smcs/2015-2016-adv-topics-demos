@@ -8,6 +8,12 @@ import javax.swing.*;
 import objectdraw.*;
 import smcs.battis.tankwars.*;
 
+/**
+ * Swing wrapper for a working Tank Wars game
+ * 
+ * @author sethbattis
+ *
+ */
 public class TankWars {
 
     public static final int TANK_COUNT = 3;

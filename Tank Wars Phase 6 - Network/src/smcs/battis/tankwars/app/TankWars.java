@@ -7,6 +7,7 @@ import javax.swing.*;
 
 import objectdraw.*;
 import smcs.battis.tankwars.*;
+import smcs.battis.tankwars.network.*;
 
 public class TankWars {
 
@@ -56,19 +57,12 @@ public class TankWars {
 	start.setBounds(477, 6, 117, 29);
 	frame.getContentPane().add(start);
 
-	Terrain terrain = new Terrain(canvas.getWidth(), canvas.getHeight());
-	new TerrainView(terrain, canvas).draw();
-
-	Referee referee = new Referee();
-
-	for (int i = 1; i <= TANK_COUNT; i++) {
-	    Tank tank = new Tank(terrain, new Location(i * (canvas.getWidth() / (TANK_COUNT + 1)), 0));
-	    TankView tankView = new TankView(tank, canvas);
-	    tankView.draw();
-	    frame.addKeyListener(new TankController(tank, tankView, referee));
-	    referee.addPlayer(tank);
-	}
-
-	referee.beginGame();
+	LocalReferee referee = new LocalReferee();
+	/*
+	 * TODO we should figure out where the hostname and port actually come
+	 * from
+	 */
+	Client client = new Client(hostname, port, canvas, frame);
+	/* TODO we should figure out how the game actually starts now... */
     }
 }

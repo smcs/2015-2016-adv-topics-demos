@@ -12,7 +12,6 @@ package smcs.battis.tankwars.network;
 
 public interface NetworkProtocol {
     final String BOM = "BOM";
-    
     enum MessageType {
 	TERRAIN,
 	TANK,

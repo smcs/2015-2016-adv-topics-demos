@@ -26,12 +26,12 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Swing App" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 1 - Random Terrain" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 4 - Referee and Turns" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 5 - Swing" type="4"/>
-<item elementID="=Simon Says Server" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Tank Wars Phase 5 - Swing" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Simon Says Server" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 3 - Bullets and Collisions" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Model-View-Controller" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Templated Type" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 6 - Network" type="4"/>
+<item elementID="=Tank Wars Phase 6 - Network" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Hello Swinging World" type="4"/>
 <item elementID="=Simon Says Client" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 2 - Tanks" type="4"/>
@@ -51,11 +51,11 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 3 - Bullets and Collisions" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Swing App" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 1 - Random Terrain" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 6 - Network" type="4"/>
+<item elementID="=Tank Wars Phase 6 - Network" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Linked List Demo" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 2 - Tanks" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 4 - Referee and Turns" type="4"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Tank Wars Phase 5 - Swing" type="4"/>
+<item elementID="=Tank Wars Phase 5 - Swing" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.php.ui.workingset.PHPWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1451854558832_7" label="PHP Development" name="PHP Development">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/batch-action" type="4"/>
