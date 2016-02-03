@@ -48,21 +48,21 @@ public class TankWars {
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.getContentPane().setLayout(null);
 
-	JDrawingCanvas canvas = new JDrawingCanvas();
-	canvas.setBounds(6, 6, 466, 466);
-	frame.getContentPane().add(canvas);
+	/* choose between client and server mode (and thus workflows) */
+	String options[] = { "Client", "Server" };
+	if (JOptionPane.showOptionDialog(frame, "Are you the client or server?", "Game Mode", JOptionPane.YES_NO_OPTION,
+		JOptionPane.QUESTION_MESSAGE, null, options, options[0]) == 0) {
+	    EnterServerAddressPanel address = new EnterServerAddressPanel(frame);
+	    address.setBounds(6, 6, 466, 466);
+	    frame.getContentPane().add(address);
+	} else {
+	    /* TODO we should probably fine tune this a bit... */
+	    System.out.println("I'm a server!");
+	}
 
 	JButton start = new JButton("Start Game");
 	start.setEnabled(false);
 	start.setBounds(477, 6, 117, 29);
 	frame.getContentPane().add(start);
-
-	LocalReferee referee = new LocalReferee();
-	/*
-	 * TODO we should figure out where the hostname and port actually come
-	 * from
-	 */
-	Client client = new Client(hostname, port, canvas, frame);
-	/* TODO we should figure out how the game actually starts now... */
     }
 }
