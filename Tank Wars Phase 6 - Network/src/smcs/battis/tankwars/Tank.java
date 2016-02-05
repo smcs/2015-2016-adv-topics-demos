@@ -1,5 +1,6 @@
 package smcs.battis.tankwars;
 
+import java.awt.*;
 import java.io.*;
 
 import objectdraw.*;
@@ -28,6 +29,7 @@ public class Tank extends SolidObject implements Serializable {
 
     private Location center;
     private double angle, power;
+    private Color color;
 
     /**
      * Construct a new tank by dropping it from the start location on to the
@@ -44,6 +46,7 @@ public class Tank extends SolidObject implements Serializable {
 	angle = (ANGLE_FLOOR + ANGLE_CEILING) / 2;
 	power = (POWER_FLOOR + POWER_CEILING) / 2;
 	center = start;
+	color = new Color((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255));
 
 	while (!terrain.contains(center)) {
 	    center = new Location(center.getX(), center.getY() + DROP_STEP);
@@ -101,10 +104,14 @@ public class Tank extends SolidObject implements Serializable {
 	 * bullet starts at the end of the barrel to prevent "friendly fire"
 	 */
 	return new Bullet(new Location(center.getX() - (RADIUS + BARREL_LENGTH) * Math.cos(angle),
-		center.getY() + (RADIUS + BARREL_LENGTH) * Math.sin(angle)), angle, power);
+		center.getY() + (RADIUS + BARREL_LENGTH) * Math.sin(angle)), angle, power, color);
     }
 
     public int getId() {
 	return id;
+    }
+
+    public Color getColor() {
+	return color;
     }
 }

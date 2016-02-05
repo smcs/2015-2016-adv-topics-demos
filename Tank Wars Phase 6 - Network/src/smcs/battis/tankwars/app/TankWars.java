@@ -9,6 +9,13 @@ import objectdraw.*;
 import smcs.battis.tankwars.*;
 import smcs.battis.tankwars.network.*;
 
+/**
+ * Swing wrapper for the original Game class (should probably extend the Game
+ * class rather than rewriting it, but we're lazy)
+ * 
+ * @author sethbattis
+ *
+ */
 public class TankWars {
 
     public static final int TANK_COUNT = 3;

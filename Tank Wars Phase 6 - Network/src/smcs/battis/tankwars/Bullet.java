@@ -1,5 +1,6 @@
 package smcs.battis.tankwars;
 
+import java.awt.*;
 import java.io.*;
 import java.util.*;
 
@@ -20,13 +21,15 @@ public class Bullet implements Serializable {
 
     private Location center, previousCenter, nextCenter;
     private double velocityX, velocityY;
+    private Color color;
 
     private Vector<BulletListener> listeners;
 
-    public Bullet(Location center, double angle, double power) {
+    public Bullet(Location center, double angle, double power, Color color) {
 	super();
 
 	this.center = center;
+	this.color = color;
 
 	// bullet is not yet in motion
 	previousCenter = null;
@@ -104,5 +107,9 @@ public class Bullet implements Serializable {
 
     public Location getCenter() {
 	return center;
+    }
+
+    public Color getColor() {
+	return color;
     }
 }

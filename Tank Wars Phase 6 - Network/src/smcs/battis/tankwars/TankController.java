@@ -58,7 +58,7 @@ public class TankController implements KeyListener {
 	    } else if (e.getKeyCode() == fire) {
 		Bullet bullet = tank.fire();
 		bullet.addBulletListener(referee);
-		BulletView bulletView = new BulletView(bullet, view.getColor(), view.getCanvas());
+		BulletView bulletView = new BulletView(bullet, view.getCanvas());
 		new BulletController(bullet, bulletView);
 
 		/*

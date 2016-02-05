@@ -46,21 +46,19 @@ public class Client implements Runnable, NetworkProtocol {
 		}
 		switch (MessageType.valueOf(scanner.nextLine())) {
 		    case TERRAIN:
-			new TerrainView((Terrain) obj.readObject(), canvas);
+			new TerrainView((Terrain) obj.readObject(), canvas).draw();
 			break;
 		    case TANK:
 			Tank t = (Tank) obj.readObject();
+			TankView tv = new TankView(t, canvas);
 			referee.addPlayer(t);
-			views.put(t.getId(), new TankView(t, canvas));
+			views.put(t.getId(), tv);
+			tv.draw();
 			break;
 		    case BULLET:
 			Bullet b = (Bullet) obj.readObject();
 			b.addBulletListener(referee);
-			/*
-			 * FIXME we should probably be storing tank color in the
-			 * tank (and the bullet)
-			 */
-			new BulletController(b, new BulletView(b, Color.RED, canvas));
+			new BulletController(b, new BulletView(b, canvas));
 			break;
 		    case ASSIGN:
 			int tankId = scanner.nextInt();

@@ -18,13 +18,13 @@ public class BulletView extends View {
 
     private FilledOval dot;
 
-    public BulletView(Bullet bullet, Color color, DrawingCanvas canvas) {
+    public BulletView(Bullet bullet, DrawingCanvas canvas) {
 	super(canvas);
 	this.bullet = bullet;
 
 	dot = new FilledOval(bullet.getCenter().getX() - RADIUS, bullet.getCenter().getY() - RADIUS, RADIUS * 2,
 		RADIUS * 2, canvas);
-	dot.setColor(color);
+	dot.setColor(bullet.getColor());
 	dot.hide();
     }
 
