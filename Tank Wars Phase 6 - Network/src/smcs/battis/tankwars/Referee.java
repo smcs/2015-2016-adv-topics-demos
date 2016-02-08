@@ -142,4 +142,8 @@ public class Referee implements BulletListener {
 	    activePlayer = players.remove();
 	}
     }
+
+    public LinkedList<Tank> getPlayers() {
+	return players;
+    }
 }

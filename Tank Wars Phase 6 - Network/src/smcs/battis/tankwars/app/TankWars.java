@@ -63,8 +63,9 @@ public class TankWars {
 	    address.setBounds(6, 6, 466, 466);
 	    frame.getContentPane().add(address);
 	} else {
-	    /* TODO we should probably fine tune this a bit... */
-	    System.out.println("I'm a server!");
+	    ServerSetupPanel setup = new ServerSetupPanel(frame);
+	    setup.setBounds(6, 6, 466, 466);
+	    frame.getContentPane().add(setup);
 	}
 
 	JButton start = new JButton("Start Game");
