@@ -17,14 +17,16 @@ public class Server implements Runnable, NetworkProtocol {
 
     private Socket socket;
     private Referee referee;
+    private int clientCount;
     private DrawingCanvas canvas;
     private JFrame frame;
+    private boolean ready;
 
     private ObjectOutputStream obj;
     private PrintStream out;
     private Scanner scanner;
 
-    public Server(Socket socket, Referee referee, JDrawingCanvas canvas, JFrame frame) {
+    public Server(Socket socket, Referee referee, int clientCount, JDrawingCanvas canvas, JFrame frame) {
 
 	if (clients == null) {
 	    clients = new Vector<Server>();
@@ -33,8 +35,10 @@ public class Server implements Runnable, NetworkProtocol {
 	}
 	clients.add(this);
 
+	ready = false;
 	this.socket = socket;
 	this.referee = referee;
+	this.clientCount = -clientCount;
 	this.canvas = canvas;
 	this.frame = frame;
 
@@ -45,7 +49,11 @@ public class Server implements Runnable, NetworkProtocol {
 	try {
 	    out.println(BOM);
 	    out.println(type);
-	    obj.writeObject(data);
+	    if (data.getClass() == Integer.class) {
+		out.println(data);
+	    } else {
+		obj.writeObject(data);
+	    }
 	    out.println(EOM);
 	} catch (IOException e) {
 	    // TODO Auto-generated catch block
@@ -59,9 +67,14 @@ public class Server implements Runnable, NetworkProtocol {
 	    obj = new ObjectOutputStream(socket.getOutputStream());
 	    out = new PrintStream(socket.getOutputStream());
 	    scanner = new Scanner(socket.getInputStream());
+	    ObjectInputStream objIn = new ObjectInputStream(socket.getInputStream());
 
 	    // tell THIS client about the terrain
 	    sendMessage(MessageType.TERRAIN, terrain);
+
+	    // wait for preceding players to be ready
+	    while (!allClientsBeforeMeReady()) {
+	    }
 
 	    // tell THIS client about all the other tanks
 	    for (Tank player : referee.getPlayers()) {
@@ -69,21 +82,69 @@ public class Server implements Runnable, NetworkProtocol {
 	    }
 
 	    // add a tank (for this client)
-	    // where does i come from? -- probably clients
-	    // where does TANK_COUNT cosme from? -- probably the ClientConnector
-	    Tank tank = new Tank(terrain, new Location(clients.size() * (i / (TANK_COUNT + 1)), 0));
-	    // what else needs to happen?
-	    
+	    Tank tank = new Tank(terrain, new Location(clients.size() * (clients.size() / (clientCount + 1)), 0));
+	    /*
+	     * TODO if we want the server to be able to play too, we've got some
+	     * work to do in terms of setting up views and controllers (and
+	     * thinking about our referee player-turn model)
+	     */
+
 	    // tell ALL the clients about this tank
-	    
+	    for (Server client : clients) {
+		client.sendMessage(MessageType.TANK, tank);
+	    }
+
 	    // tell THIS client that THIS tank is his/hers
-	    // hmm... our current SendMessage may not work for this message
+	    sendMessage(MessageType.ASSIGN, tank.getId());
+
+	    // ok, now the client is set up
+	    ready = true;
+
+	    // wait for communication from the client
+	    while (!referee.gameOver()) {
+		while (scanner.nextLine() != BOM) {
+		}
+		switch (MessageType.valueOf(scanner.nextLine())) {
+		    case BULLET:
+			Bullet bullet = (Bullet) objIn.readObject();
+			bullet.addBulletListener(referee);
+			new BulletController(bullet, new BulletView(bullet, canvas));
+			for (Server clients : clients) {
+			    sendMessage(MessageType.BULLET, bullet);
+			}
+			break;
+		}
+		while (scanner.nextLine() != EOM) {
+		}
+	    }
 
 	} catch (IOException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	} catch (ClassNotFoundException e) {
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	}
 
     }
 
+    private boolean allClientsBeforeMeReady() {
+	for (Server client : clients) {
+	    if (client == this) {
+		return true;
+	    } else if (!client.ready) {
+		return false;
+	    }
+	}
+	return true;
+    }
+
+    public static boolean allClientsReady() {
+	for (Server client : clients) {
+	    if (!client.ready) {
+		return false;
+	    }
+	}
+	return true;
+    }
 }

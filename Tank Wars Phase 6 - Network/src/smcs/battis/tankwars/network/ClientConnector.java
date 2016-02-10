@@ -19,8 +19,10 @@ public class ClientConnector {
 	try {
 	    ServerSocket socket = new ServerSocket(port);
 	    for (int i = 0; i < clients; i++) {
-		new Server(socket.accept(), referee, canvas, frame);
+		new Server(socket.accept(), referee, clients, canvas, frame);
 	    }
+	    while (!Server.allClientsReady()) {};
+	    referee.beginGame();
 	} catch (IOException e) {
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();
