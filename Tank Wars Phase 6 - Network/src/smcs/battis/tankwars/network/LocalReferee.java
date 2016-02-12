@@ -2,6 +2,8 @@ package smcs.battis.tankwars.network;
 
 import smcs.battis.tankwars.*;
 
+// small, trivial modification
+
 /**
  * Enforce rules locally, based on updates via the network from a server Referee
  * 
